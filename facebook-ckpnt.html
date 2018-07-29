@@ -13,17 +13,26 @@
 
     <script type="text/babel">
        class Facebook extends React.Component {
+         constructor(props){
+           super(props);
+           this.state = {
+             program: "Bloc Web Developer Track"
+           }
+         }
+
          render() {
            return (
              <div>
+               <h1>Hello {this.props.name}!</h1>
                <a href = "https://www.facebook.com" target="_blank">Go To Facebook!</a>
+               <h3>You are on the: {this.state.program}</h3>
              </div>
            );
          }
        }
 
        ReactDOM.render(
-         <Facebook />, document.getElementById('app')
+         <Facebook name="Liz"/>, document.getElementById('app')
        );
     </script>
   </body>
